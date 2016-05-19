@@ -1,9 +1,10 @@
 using System; /* include the System namespace */
-namespace SampleApplication /* namespace declaration. A namespace is a collection of classes */
+namespace SampleApplication // namespace declaration. A namespace is a collection of classes 
 {
 
 
-#region Class definition
+
+   #region Class definition
    class Rectangle // Class Example
    {
       // member variables
@@ -30,6 +31,7 @@ namespace SampleApplication /* namespace declaration. A namespace is a collectio
    
    class ExecuteRectangle 
    {
+	   
       static void Main(string[] args) 
       {
 		  
@@ -54,6 +56,23 @@ namespace SampleApplication /* namespace declaration. A namespace is a collectio
 		  
 		  int [] marks = new int[]  { 99,  98, 92, 97, 95};
 		  
+		  // String -- More string methods : http://www.tutorialspoint.com/csharp/csharp_strings.htm
+		  string fullname = fname + lname;
+		  
+		  //by using string constructor
+		  char[] letters = { 'H', 'e', 'l', 'l','o' };
+		  string greetings = new string(letters); // Hello
+		  
+		  //methods returning string
+		  string[] sarray = { "Hello", "From", "Tutorials", "Point" };
+		  string message = String.Join(" ", sarray); // Hello From Tutorials Point
+		  
+		  //formatting method to convert a value
+		  DateTime waiting = new DateTime(2012, 10, 10, 17, 58, 1);
+		  string chat = String.Format("Message sent at {0:t} on {0:D}", waiting); // Message sent at 5:58 PM on Wednesday, October 10, 2012
+		  
+		  
+		  
          Rectangle r = new Rectangle();
          r.Acceptdetails();
          r.Display();
@@ -62,7 +81,28 @@ namespace SampleApplication /* namespace declaration. A namespace is a collectio
 		  /* output example */
          Console.WriteLine("Hello World");
          Console.ReadKey(); /* for VS.NET Users. This makes the program wait for a key press */
+		 
+		 Books Book1;   /* Declare Book1 of type Book */
+		 Books Book2;   /* Declare Book2 of type Book */
+
+		 /* book 1 specification */
+		 Book1.title = "C Programming";
+		 Book1.author = "Nuha Ali"; 
+		 Book1.subject = "C Programming Tutorial";
+		 Book1.book_id = 6495407;
       }
    }
-#endregion
+
+   // Structure http://www.tutorialspoint.com/csharp/csharp_struct.htm
+   struct Books
+   {
+	   public string title;
+	   public string author;
+	   public string subject;
+	   public int book_id;
+	   };  
+	   
+	// Enums   
+	enum Days { Sun, Mon, tue, Wed, thu, Fri, Sat }; // By default, the value of the first enumeration symbol is 0.
+   #endregion
 }
