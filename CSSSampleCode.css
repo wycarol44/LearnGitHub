@@ -1,0 +1,49 @@
+/* selector { property: value } */
+ /*  http://www.tutorialspoint.com/css/css_inclusion.htm  CSS Inclusion : how to link a css file */
+ /* http://www.tutorialspoint.com/css/css_links.htm Style the link color of actions */
+ 
+* { /* The Universal Selectors */
+   font-family:georgia,garamond,serif; 
+   font-style:italic; 
+   font-size:20px;
+}
+
+ul em { /* The Descendant Selectors */
+   word-spacing:5px;
+   text-align:center;
+}
+
+.black { /* The Class Selectors */
+   font-size:20px;
+}
+
+#black { /* The ID Selectors */
+   word-spacing:5px;
+   text-align:center;
+}
+
+body > p { /* The Child Selectors */  /* Render all the paragraphs in black if they are direct child of <body> element. */
+   color: #000000; 
+}
+
+/* The Attribute Selectors */
+p[lang] { /* Selects all paragraph elements with a lang attribute. */
+   color: #000000; 
+}
+
+p[lang="fr"] { /* Selects all paragraph elements whose lang attribute has a value of exactly "fr". */
+   color: #000000; 
+}
+
+p[lang~="fr"] { /* Selects all paragraph elements whose lang attribute contains the word "fr" */
+   color: #000000; 
+}
+
+p[lang|="en"] { /* Selects all paragraph elements whose lang attribute contains values that are exactly "en", or begin with "en-". */
+   color: #000000; 
+}
+
+/* Grouping Selectors */
+h1, h2, h3 {
+   color: #000000; 
+}
